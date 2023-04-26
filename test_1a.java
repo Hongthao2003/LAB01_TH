@@ -38,7 +38,7 @@ public class test_1a {
                     double DungTich = sc.nextDouble();
                     double thuexe = ds.thuecuaxe(TriGia, menu);
                     
-                    Vehicle vh = new Vehicle(LoaiXe, menu, menu, menu, menu);
+                    Vehicle vh = new Vehicle(LoaiXe, TenChuXe, menu, menu, DungTich, thuexe);
                     ds.them_xe(vh);
                     break;
                 case 2:
