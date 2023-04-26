@@ -14,7 +14,7 @@ import java.util.ArrayList;
 public class LopHocPhan {
    private String maLHP, tenLHP, tenGV, thongtinLopHoc, dsSV;
    
-    ArrayList<LopHocPhan> hp = new ArrayList<>();
+     private ArrayList<LopHocPhan> hp = new ArrayList<>();
    Scanner sc = new Scanner(System.in);
    
     public LopHocPhan() {
@@ -66,6 +66,11 @@ public class LopHocPhan {
 
     public void setDsSV(String dsSV) {
         this.dsSV = dsSV;
+    }
+
+    @Override
+    public String toString() {
+        return "LopHocPhan{" + "maLHP=" + maLHP + ", tenLHP=" + tenLHP + ", tenGV=" + tenGV + ", thongtinLopHoc=" + thongtinLopHoc + ", dsSV=" + dsSV + ", sc=" + sc + '}';
     }
 
 
