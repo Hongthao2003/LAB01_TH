@@ -10,44 +10,30 @@ import java.util.Scanner;
  * @author LENOVO
  */
 public class DSXE {
-    ArrayList<Vehicle> ds = new ArrayList<>();
+    ArrayList<Vehicle> vh = new ArrayList<>();
     Scanner sc = new Scanner(System.in);
     
-    public void Nhap(){
-        while (true){
-            System.out.println("Nhập loại xe:");
-            String loaixe = sc.nextLine();
-            System.out.println("Nhập mã xe:");
-            int maxe = sc.nextInt();
-            System.out.println("Nhập dung tích xe :");
-            int dungtich = sc.nextInt();
-            System.out.println("Nhập trị giá xe: ");
-            int trigia = sc.nextInt();
-            
-            Vehicle Vehicle = new Vehicle(loaixe, maxe, dungtich, trigia, maxe);
-            ds.add(Vehicle);
-            
-            System.out.println("Nhập xe tiếp theo :(yes or no )");
-            sc.nextLine();
-            if(sc.nextLine().equals("no")){
-                break;
-            }
-        }
+   public void them_xe(Vehicle ve){
+        vh.add(ve);
+        System.out.println("Them thanh cong");
     }
+    
     public void Xuat(){
-        for(Vehicle c:ds){
+        for(Vehicle c:vh){
             System.out.println(c.toString());
             
         }
-    }
-    public void thuexe(double trigia, int dungtich){
-        int thuexe;
+    }    
+    public double thuecuaxe(double trigia, int dungtich){
+        double thuexe;
         if(dungtich <100) thuexe =(int) (trigia*0.01);
-        else if (dungtich >= 100 && dungtich<=200) thuexe = (int) (trigia * 0.03);
+        else if (dungtich >= 100 && dungtich<=200) thuexe = (double) (trigia * 0.03);
         
         else thuexe = (int) (trigia * 0.05);
     
             System.out.println("Thuế xe cần nộp là :" +thuexe);
+        return 0;
     }
+
 }
 
