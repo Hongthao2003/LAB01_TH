@@ -10,7 +10,8 @@ package labth1;
  */
 public class Vehicle {
     String loaixe;
-    int maxe,dungtich,trigia, thuexe;
+    int maxe,trigia;
+    double dungtich,thuexe;
 
     public Vehicle() {
     }
@@ -39,11 +40,11 @@ public class Vehicle {
         this.maxe = maxe;
     }
 
-    public int getDungtich() {
+    public double getDungtich() {
         return dungtich;
     }
 
-    public void setDungtich(int dungtich) {
+    public void setDungtich(double dungtich) {
         this.dungtich = dungtich;
     }
 
@@ -55,8 +56,7 @@ public class Vehicle {
         this.trigia = trigia;
     }
 
-    public int thuexe(){
-        int thuexe;
+    public double thuexe(){
         if(dungtich <100) thuexe =(int) (trigia*0.01);
         else if (dungtich >= 100 && dungtich<=200) thuexe = (int) (trigia * 0.03);
         else thuexe = (int) (trigia * 0.05);
