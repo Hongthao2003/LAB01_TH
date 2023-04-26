@@ -9,18 +9,19 @@ package labth1;
  * @author LENOVO
  */
 public class Vehicle {
-    String loaixe;
+    String loaixe,tenchuxe;
     int maxe,trigia;
     double dungtich,thuexe;
 
     public Vehicle() {
     }
 
-    public Vehicle(String loaixe, int maxe, int dungtich, int trigia, int thuexe) {
+    public Vehicle(String loaixe, String tenchuxe, int maxe, int trigia, double dungtich, double thuexe) {
         this.loaixe = loaixe;
+        this.tenchuxe = tenchuxe;
         this.maxe = maxe;
-        this.dungtich = dungtich;
         this.trigia = trigia;
+        this.dungtich = dungtich;
         this.thuexe = thuexe;
     }
 
@@ -32,20 +33,20 @@ public class Vehicle {
         this.loaixe = loaixe;
     }
 
+    public String getTenchuxe() {
+        return tenchuxe;
+    }
+
+    public void setTenchuxe(String tenchuxe) {
+        this.tenchuxe = tenchuxe;
+    }
+
     public int getMaxe() {
         return maxe;
     }
 
     public void setMaxe(int maxe) {
         this.maxe = maxe;
-    }
-
-    public double getDungtich() {
-        return dungtich;
-    }
-
-    public void setDungtich(double dungtich) {
-        this.dungtich = dungtich;
     }
 
     public int getTrigia() {
@@ -56,6 +57,22 @@ public class Vehicle {
         this.trigia = trigia;
     }
 
+    public double getDungtich() {
+        return dungtich;
+    }
+
+    public void setDungtich(double dungtich) {
+        this.dungtich = dungtich;
+    }
+
+    public double getThuexe() {
+        return thuexe;
+    }
+
+    public void setThuexe(double thuexe) {
+        this.thuexe = thuexe;
+    }
+    
     public double thuexe(){
         if(dungtich <100) thuexe =(int) (trigia*0.01);
         else if (dungtich >= 100 && dungtich<=200) thuexe = (int) (trigia * 0.03);
